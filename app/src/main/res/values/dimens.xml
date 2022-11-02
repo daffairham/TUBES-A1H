@@ -2,6 +2,7 @@
 <resources>
     <dimen name="textSizeTitle">45sp</dimen>
     <dimen name="textSizeDesc">25sp</dimen>
+    <dimen name="textSizeBuatPertemuan">30dp</dimen>
     <dimen name="marginTopDesc">20dp</dimen>
     <dimen name="btnWidth">300dp</dimen>
     <dimen name="btnMargin">15dp</dimen>

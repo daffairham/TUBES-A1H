@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/main_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/main_title"
@@ -22,6 +23,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/textSizeTitle"></TextView>
         <TextView
+            android:id="@+id/main_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/main_desc"
@@ -36,6 +38,7 @@
             android:layout_alignParentBottom="true"
             android:gravity="center">
         <Button
+            android:id="@+id/btn_start"
             android:layout_width="@dimen/btnWidth"
             android:layout_height="match_parent"
             android:text="@string/mulaiTemu"
