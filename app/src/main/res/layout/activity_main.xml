@@ -28,20 +28,20 @@
             android:id="@+id/fragment_container"/>
     </LinearLayout>
 
-    <!-- Left Drawer -->
-<!--    <RelativeLayout-->
-<!--        android:id="@+id/left_drawer"-->
-<!--        android:layout_width="240dp"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start" >-->
+<!--     Left Drawer -->
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" >
 
-<!--        <fragment-->
-<!--            android:id="@+id/fragment_left"-->
-<!--            android:name="com.example.tubes_a1h.LeftFragment"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"/>-->
+        <fragment
+            android:id="@+id/fragment_left"
+            android:name="com.example.tubes_a1h.LeftFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
 
-<!--    </RelativeLayout>-->
+    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
