@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TUBES-A1H</string>
+    <string name="main_title">Rumah Sakit Cepat Kembali</string>
+    <string name="main_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, leo sodales rhoncus iaculis, arcu odio fermentum dui, at vestibulum enim sem sit amet nisi. Donec venenatis lacus bibendum venenatis molestie. Vivamus sed ipsum molestie, facilisis sapien id, consequat lacus."</string>
+    <string name="mulaiTemu">Mulai Pertemuan</string>
 </resources>

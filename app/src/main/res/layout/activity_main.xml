@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -10,26 +16,34 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Rumah Sakit Cepat Kembali"
+            android:text="@string/main_title"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="45sp"></TextView>
+            android:textSize="@dimen/textSizeTitle"></TextView>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor si amet"
-            android:layout_marginTop="20dp"
-            android:textSize="25sp"
+            android:text="@string/main_desc"
+            android:layout_marginTop="@dimen/marginTopDesc"
+            android:textSize="@dimen/textSizeDesc"
             android:textColor="@color/black"></TextView>
+    </LinearLayout>
+</LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="match_parent"
+            android:text="@string/mulaiTemu"
+            android:layout_marginBottom="@dimen/btnMargin"
+            android:gravity="center"
+            android:backgroundTint="@color/gray"
             ></Button>></LinearLayout>
 
-    </LinearLayout>
-</LinearLayout>
+
+
+</RelativeLayout>
