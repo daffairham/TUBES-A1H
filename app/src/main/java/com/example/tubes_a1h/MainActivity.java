@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(binding.getRoot());
 
         this.mainFragment = MainFragment.newInstance("New Fragment 1");
-        this.secondFragment = Pertemuan.newIstance("New Fragment 2");
-        this.setSupportActionBar(this.binding.toolbar);
+        this.secondFragment = Pertemuan.newInstance("New Fragment 2");
 
         ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);
         this.binding.drawerLayout.addDrawerListener(abdt);

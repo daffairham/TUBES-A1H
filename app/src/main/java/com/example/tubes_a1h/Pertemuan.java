@@ -19,7 +19,7 @@ public class Pertemuan extends Fragment {
         return view;
     }
 
-    public static Pertemuan newIstance(String title){
+    public static Pertemuan newInstance(String title){
         Pertemuan fragment = new Pertemuan();
         Bundle args = new Bundle();
         args.putString("title", title);
