@@ -16,6 +16,7 @@ import android.widget.Button;
 
 import com.example.tubes_a1h.databinding.ActivityMainBinding;
 import com.example.tubes_a1h.databinding.BuatPertemuanBinding;
+import com.example.tubes_a1h.databinding.DaftarDokterBinding;
 import com.example.tubes_a1h.databinding.FragmentMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected MainFragment mainFragment;
     protected FragmentManager fragmentManager;
     protected Pertemuan pertemuanFragment;
+    protected DaftarDokter dokterFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         this.mainFragment = mainFragment.newInstance();
         this.pertemuanFragment = pertemuanFragment.newInstance();
+        this.dokterFragment = dokterFragment.newInstance();
         this.setSupportActionBar(binding.toolbar);
 
         ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);
@@ -58,7 +61,10 @@ public class MainActivity extends AppCompatActivity {
             ft.replace(binding.fragmentContainer.getId(), this.mainFragment).addToBackStack(null).setReorderingAllowed(true);
         }else if(page==2) {
             ft.replace(binding.fragmentContainer.getId(), this.pertemuanFragment).addToBackStack(null).setReorderingAllowed(true);
-        }else if(page==0){
+        }else if(page==3){
+            ft.replace(binding.fragmentContainer.getId(), this.dokterFragment).addToBackStack(null).setReorderingAllowed(true);
+        }
+        else if(page==0){
             this.moveTaskToBack(true);
             this.finish();
         }

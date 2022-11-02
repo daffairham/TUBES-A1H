@@ -8,7 +8,7 @@
         android:id="@+id/nama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:text="@string/namaD"
         android:textColor="@color/black"
         android:textSize="@dimen/textlist"
         android:padding="@dimen/margin"/>
@@ -17,7 +17,7 @@
         android:id="@+id/spesialis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/detail"
+        android:text="@string/spesialis"
         android:textColor="@color/black"
         android:layout_alignParentRight="true"
         android:textSize="@dimen/textlist"

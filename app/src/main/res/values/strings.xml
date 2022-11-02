@@ -12,6 +12,6 @@
     <string name="exit">Exit</string>
     <string name="add">add</string>
     <string name="juduldokter">Daftar Dokter</string>
-    <string name="title">Title</string>
-    <string name="detail">Detail</string>
+    <string name="namaD">Nama Dokter</string>
+    <string name="spesialis">Spesialis</string>
 </resources>
