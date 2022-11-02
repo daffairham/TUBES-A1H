@@ -45,7 +45,7 @@
             android:layout_marginBottom="@dimen/btnMargin"
             android:gravity="center"
             android:backgroundTint="@color/gray"
-            ></Button>></LinearLayout>
+            ></Button></LinearLayout>
 
 
 
