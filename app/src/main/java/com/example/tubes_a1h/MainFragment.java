@@ -11,6 +11,8 @@ import com.example.tubes_a1h.databinding.FragmentMainBinding;
 
 public class MainFragment extends Fragment implements View.OnClickListener{
     protected FragmentMainBinding binding;
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentMainBinding.inflate(inflater, container, false);
         View view = this.binding.getRoot();
