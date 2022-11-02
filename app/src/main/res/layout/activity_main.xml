@@ -2,7 +2,6 @@
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
@@ -30,19 +29,19 @@
     </LinearLayout>
 
     <!-- Left Drawer -->
-    <RelativeLayout
-        android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start" >
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/left_drawer"-->
+<!--        android:layout_width="240dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start" >-->
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_left"
-            android:name="com.example.tubes_a1h.LeftFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout="@layout/fragment_left" />
+<!--        <fragment-->
+<!--            android:id="@+id/fragment_left"-->
+<!--            android:name="com.example.tubes_a1h.LeftFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"/>-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

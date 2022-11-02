@@ -1,8 +1,12 @@
 package com.example.tubes_a1h;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -13,8 +17,7 @@ import com.example.tubes_a1h.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ActivityMainBinding binding;
-    private MainPresenter mp;
+    protected ActivityMainBinding binding;
     protected MainFragment mainFragment;
     protected Pertemuan secondFragment;
     protected FragmentManager fragmentManager;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mainFragment = MainFragment.newInstance("New Fragment 1");
         this.secondFragment = Pertemuan.newInstance("New Fragment 2");
+        this.setSupportActionBar(binding.toolbar);
 
         ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);
         this.binding.drawerLayout.addDrawerListener(abdt);
