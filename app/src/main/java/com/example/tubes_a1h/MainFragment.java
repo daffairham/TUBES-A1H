@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
@@ -16,15 +17,22 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         binding = FragmentMainBinding.inflate(inflater,container,false);
         View view = this.binding.getRoot();
+        binding.btnStart.setOnClickListener(this::onClick);
         return view;
     }
-
-    public static MainFragment newInstance(String title){
+    public static MainFragment newInstance(){
         MainFragment fragment = new MainFragment();
         Bundle args = new Bundle();
-        args.putString("title", title);
         fragment.setArguments(args);
         return fragment;
     }
+    public void onClick(View view) {
+        Bundle res = new Bundle();
+        res.putInt("page", 2);
+        this.getParentFragmentManager().setFragmentResult("changePage", res);
+    }
+
+
+
 
 }

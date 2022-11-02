@@ -12,24 +12,26 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.tubes_a1h.databinding.ActivityMainBinding;
+import com.example.tubes_a1h.databinding.BuatPertemuanBinding;
+import com.example.tubes_a1h.databinding.FragmentMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     protected ActivityMainBinding binding;
     protected MainFragment mainFragment;
-    protected Pertemuan secondFragment;
     protected FragmentManager fragmentManager;
-
+    protected Pertemuan pertemuanFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        this.mainFragment = MainFragment.newInstance("New Fragment 1");
-        this.secondFragment = Pertemuan.newInstance("New Fragment 2");
+        this.mainFragment = mainFragment.newInstance();
+        this.pertemuanFragment = pertemuanFragment.newInstance();
         this.setSupportActionBar(binding.toolbar);
 
         ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);
@@ -42,9 +44,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ft.add(R.id.fragment_container, mainFragment)
                 .addToBackStack(null)
                 .commit();
+        this.getSupportFragmentManager().setFragmentResultListener("changePage", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                int page = result.getInt("page");
+                changePage(page);
+            }
+        });
     }
-
-    @Override
-    public void onClick(View view) {
+    public void changePage(int page){
+        FragmentTransaction ft = this.fragmentManager.beginTransaction();
+        if(page==1){
+            ft.replace(binding.fragmentContainer.getId(), this.mainFragment).addToBackStack(null).setReorderingAllowed(true);
+        }else if(page==2) {
+            ft.replace(binding.fragmentContainer.getId(), this.pertemuanFragment).addToBackStack(null).setReorderingAllowed(true);
+        }else if(page==0){
+            this.moveTaskToBack(true);
+            this.finish();
+        }
+        ft.commit();
     }
 }
