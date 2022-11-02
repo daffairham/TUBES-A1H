@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/bone"
+        android:textAlignment="textStart"
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/pertemuan"
+        android:layout_below="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:padding="20dp"
+        android:text="@string/pertemuan"
+        android:textAlignment="textStart"
+        android:textColor="@color/bone"/>
+
+    <Button
+        android:id="@+id/dokter"
+        android:layout_below="@+id/pertemuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dokter"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/bone"
+        android:textAlignment="textStart"
+        android:padding="20dp"/>
+    <Button
+        android:id="@+id/exit"
+        android:layout_below="@+id/dokter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/bone"
+        android:textAlignment="textStart"
+        android:padding="20dp"/>
+</RelativeLayout>

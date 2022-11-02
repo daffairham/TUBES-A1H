@@ -1,14 +1,46 @@
 package com.example.tubes_a1h;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.tubes_a1h.databinding.ActivityMainBinding;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private ActivityMainBinding binding;
+    private MainPresenter mp;
+    protected MainFragment mainFragment;
+    protected Pertemuan secondFragment;
+    protected FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        this.mainFragment = MainFragment.newInstance("New Fragment 1");
+        this.secondFragment = Pertemuan.newIstance("New Fragment 2");
+        this.setSupportActionBar(this.binding.toolbar);
+
+        ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);
+        this.binding.drawerLayout.addDrawerListener(abdt);
+        abdt.syncState();
+
+        this.fragmentManager = this.getSupportFragmentManager();
+
+        FragmentTransaction ft = this.fragmentManager.beginTransaction();
+        ft.add(R.id.fragment_container, mainFragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void onClick(View view) {
     }
 }
