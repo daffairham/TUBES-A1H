@@ -66,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         }else if(page==3){
             ft.replace(binding.fragmentContainer.getId(), this.dokterFragment).addToBackStack(null).setReorderingAllowed(true);
         }
+        else if(page==4){
+            ft.replace(binding.fragmentContainer.getId(), this.tambahDokFragment).addToBackStack(null).setReorderingAllowed(true);
+        }
         else if(page==0){
             this.moveTaskToBack(true);
             this.finish();

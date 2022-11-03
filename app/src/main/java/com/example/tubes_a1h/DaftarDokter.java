@@ -17,6 +17,7 @@ public class DaftarDokter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DaftarDokterBinding.inflate(inflater, container, false);
         View view = this.binding.getRoot();
+        binding.add.setOnClickListener(this::onClick);
         return view;
     }
 
@@ -25,5 +26,11 @@ public class DaftarDokter extends Fragment {
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public void onClick(View view) {
+        Bundle res = new Bundle();
+        res.putInt("page", 4);
+        this.getParentFragmentManager().setFragmentResult("changePage", res);
     }
 }
