@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected FragmentManager fragmentManager;
     protected Pertemuan pertemuanFragment;
     protected DaftarDokter dokterFragment;
+    protected TambahDokterFragment tambahDokFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         this.mainFragment = mainFragment.newInstance();
         this.pertemuanFragment = pertemuanFragment.newInstance();
         this.dokterFragment = dokterFragment.newInstance();
+        this.tambahDokFragment = tambahDokFragment.newInstance();
         this.setSupportActionBar(binding.toolbar);
 
         ActionBarDrawerToggle abdt = new ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.openDrawer, R.string.closeDrawer);

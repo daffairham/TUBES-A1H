@@ -4,6 +4,7 @@
     <string name="main_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend, leo sodales rhoncus iaculis, arcu odio fermentum dui, at vestibulum enim sem sit amet nisi. Donec venenatis lacus bibendum venenatis molestie. Vivamus sed ipsum molestie, facilisis sapien id, consequat lacus."</string>
     <string name="mulaiTemu">Mulai Pertemuan</string>
     <string name="buatTemu">Buat Pertemuan</string>
+    <string name="tambahDokter">Tambah Dokter</string>
     <string name="home">Home</string>
     <string name="openDrawer">open</string>
     <string name="closeDrawer">close</string>
