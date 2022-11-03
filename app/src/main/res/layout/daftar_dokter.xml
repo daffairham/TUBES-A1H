@@ -10,6 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/juduldokter"
+        android:layout_margin="@dimen/margin"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="@dimen/textSizeBuatPertemuan"/>
 
     <ListView
@@ -17,44 +20,20 @@
         android:layout_below="@+id/tv_judul"
         android:id="@+id/food"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_width="match_parent"
+        android:padding="@dimen/margin"/>
 
     <Button
         android:id="@+id/add"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/btnWidth"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/btnMargin"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#c7c7c7"
+        android:backgroundTint="@color/green"
         android:text="@string/add"
         android:textSize="20dp"
-        android:textColor="@color/black" />
-
-    <EditText
-        android:id="@+id/title"
-        android:layout_width="204dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/add"
-        android:layout_marginBottom="-3dp"
-        android:background="#0055ff"
-        android:hint="Title"
-        android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:layout_marginRight="10dp"/>
-
-    <EditText
-        android:id="@+id/detail"
-        android:layout_width="208dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/add"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-3dp"
-        android:background="#0055ff"
-        android:hint="Details"
-        android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:textColor="@color/white" />
 
 </RelativeLayout>
 

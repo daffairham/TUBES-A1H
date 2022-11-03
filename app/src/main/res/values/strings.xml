@@ -14,4 +14,5 @@
     <string name="juduldokter">Daftar Dokter</string>
     <string name="namaD">Nama Dokter</string>
     <string name="spesialis">Spesialis</string>
+    <string name="waktu">DD-MM-YY</string>
 </resources>
